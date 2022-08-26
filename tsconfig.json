@@ -2,9 +2,7 @@
   "compilerOptions": {
     "target": "ES2018",
     "module": "commonjs",
-    "lib": [
-      "es2018"
-    ],
+    "lib": ["es2018"],
     "declaration": true,
     "strict": true,
     "noImplicitAny": true,
@@ -19,12 +17,13 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "typeRoots": [
-      "./node_modules/@types"
-    ]
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "/opt/nodejs/licensesLayer": ["src/core/layers/licensesLayer/nodejs/licenseRepository"],
+      "/opt/nodejs/licenseEventsLayer": ["src/core/layers/licenseEventsLayer/nodejs/licenseEvent"]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "cdk.out"
-  ]
+  "exclude": ["node_modules", "cdk.out"]
 }
